@@ -1,0 +1,56 @@
+"pt-BR":
+  home:
+    title_part_1: "Coffee, Codes"
+    title_part_2: "& Anything Else"
+    description: "Um espaço digital onde a cafeína se transforma em linhas de código. Bem-vindo ao meu portfólio e blog pessoal."
+    view_projects: "Ver Projetos"
+    read_articles: "Ler Artigos"
+  about:
+    title: "Sobre o Dev"
+    bio: "Olá! Sou um desenvolvedor apaixonado por facilitar a vida das pessoas através da tecnologia. Quando não estou refatorando milhares de linhas de código depois de pedir a uma IA para centralizar uma div, provavelmente você me encontrará testando um novo método de preparo de café ou escrevendo sobre tecnologia."
+    stack_title: "Stack Principal"
+    stack_value: "Python & Rails"
+    coffee_title: "Café Favorito"
+    coffee_value: "V60 / Etiópia"
+    journey_title: "Minha Trajetória"
+    journey:
+      item1:
+        title: "Suporte B2B"
+        period: "2025 - Presente"
+        description: "Análise de solicitações de suporte de empresas clientes relacionadas à entrega de dados via API."
+      item2:
+        title: "Desenvolvedor FullStack"
+        period: "2024 - 2025"
+        description: "Desenvolvimento de APIs RESTful e interfaces dinâmicas."
+    what_i_do_title: "O Que Faço"
+    what_i_do:
+      item1:
+        title: "Fullstack Engineering"
+        description: "Criar aplicações fullstack com Python, Golang, React & Rails."
+      item2:
+        title: "Tech Writing"
+        description: "Documentação e compartilhamento de conhecimento."
+  contact:
+    title: "Contato"
+  projects:
+    title: "Portfólio"
+    subtitle: "Uma seleção dos meus trabalhos recentes."
+    view_project: "Ver Projeto"
+    items:
+      SpiderVerse:
+        description: "Uma Landing Page para Homem-Aranha: Através do Aranhaverso."
+      cyberweb:
+        description: "Um site moderno com tema Cyberpunk feito com React."
+      calculator:
+        description: "Uma calculadora complexa com recursos de IA."
+      imc:
+        description: "Uma calculadora de IMC simples."
+  blog:
+    reading_time: "min de leitura"
+    read_more: "Ler completo"
+  navbar:
+    home: "Início"
+    about: "Sobre Mim"
+    projects: "Projetos"
+    blog: "Blog"
+    contact: "Contato"

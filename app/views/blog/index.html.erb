@@ -1,0 +1,31 @@
+<div class="space-y-6 -mt-12 md:-mt-20">
+  <% @blog_posts.each do |post| %>
+    <div class="bg-[#1c1917] rounded-xl p-6 border border-[#292524] hover:border-amber-500/50 transition-colors group">
+      <div class="flex items-center gap-3 text-sm mb-3">
+        <span class="text-amber-500 font-mono text-xs md:text-sm"><%= (post.date || post.created_at).strftime("%d %b, %Y") %></span>
+        <span class="text-[#57534e]">•</span>
+        <span class="bg-[#292524] text-[#a8a29e] px-2 py-0.5 rounded text-xs"><%= post.category %></span>
+      </div>
+
+      <h2 class="text-xl md:text-2xl font-bold text-[#e7e5e4] mb-3 group-hover:text-amber-500 transition-colors">
+        <%= post.title %>
+      </h2>
+
+      <p class="text-[#a8a29e] mb-6 leading-relaxed text-sm md:text-base">
+        <%= post.summary %>
+      </p>
+
+      <div class="flex items-center justify-between mt-auto pt-4 border-t border-[#292524]">
+        <div class="flex items-center gap-2 text-[#78716c] text-sm">
+          <i data-lucide="clock" class="w-4 h-4"></i>
+          <span><%= post.reading_time %> <%= t('blog.reading_time') %></span>
+        </div>
+        
+        <%= link_to blog_path(post), class: "flex items-center gap-2 text-[#e7e5e4] hover:text-amber-500 transition-colors text-sm font-medium group/link" do %>
+          <%= t('blog.read_more') %>
+          <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,71 @@
+<div class="max-w-6xl mx-auto p-10">
+  <div class="flex items-center justify-between mb-8">
+    <div class="flex items-center gap-3">
+      <div class="p-2 bg-amber-500/10 rounded-lg">
+        <i data-lucide="layout-dashboard" class="w-6 h-6 text-amber-500"></i>
+      </div>
+      <h1 class="text-2xl font-bold text-[#e7e5e4]">Gerenciar Blog</h1>
+    </div>
+    
+    <%= link_to new_admin_blog_path, class: "flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-[#1c1917] font-bold py-2.5 px-5 rounded-lg transition-colors" do %>
+      <i data-lucide="plus" class="w-5 h-5"></i>
+      Novo Post
+    <% end %>
+  </div>
+
+  <div class="bg-[#1c1917] rounded-xl border border-[#292524] overflow-hidden">
+    <div class="overflow-x-auto">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-[#292524] bg-[#292524]/50">
+            <th class="px-6 py-4 text-sm font-semibold text-[#a8a29e]">Título</th>
+            <th class="px-6 py-4 text-sm font-semibold text-[#a8a29e]">Data</th>
+            <th class="px-6 py-4 text-sm font-semibold text-[#a8a29e]">Categoria</th>
+            <th class="px-6 py-4 text-sm font-semibold text-[#a8a29e] text-right">Ações</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-[#292524]">
+          <% @blog_posts.each do |post| %>
+            <tr class="group hover:bg-[#292524]/30 transition-colors">
+              <td class="px-6 py-4">
+                <div class="font-medium text-[#e7e5e4]"><%= post.title %></div>
+                <div class="text-sm text-[#78716c] truncate max-w-xs"><%= post.summary %></div>
+              </td>
+              <td class="px-6 py-4 text-[#a8a29e] text-sm">
+                <%= (post.date || post.created_at).strftime("%d/%m/%Y") %>
+              </td>
+              <td class="px-6 py-4">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#292524] text-[#a8a29e]">
+                  <%= post.category %>
+                </span>
+              </td>
+              <td class="px-6 py-4 text-right">
+                <div class="flex items-center justify-end gap-2">
+                  <%= link_to blog_path(post), class: "p-2 text-[#a8a29e] hover:text-[#e7e5e4] hover:bg-[#292524] rounded-lg transition-colors", title: "Visualizar" do %>
+                    <i data-lucide="eye" class="w-4 h-4"></i>
+                  <% end %>
+                  
+                  <%= link_to edit_admin_blog_path(post), class: "p-2 text-blue-400 hover:text-blue-300 hover:bg-blue-400/10 rounded-lg transition-colors", title: "Editar" do %>
+                    <i data-lucide="pencil" class="w-4 h-4"></i>
+                  <% end %>
+                  
+                  <%= button_to admin_blog_path(post), method: :delete, class: "p-2 text-red-400 hover:text-red-300 hover:bg-red-400/10 rounded-lg transition-colors cursor-pointer", form: { class: "inline", data: { turbo: false }, onsubmit: "return confirm('Tem certeza que deseja excluir este post?');" }, title: "Excluir" do %>
+                    <i data-lucide="trash-2" class="w-4 h-4"></i>
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    
+    <% if @blog_posts.empty? %>
+      <div class="p-12 text-center text-[#78716c]">
+        <i data-lucide="file-x" class="w-12 h-12 mx-auto mb-4 opacity-50"></i>
+        <p class="text-lg font-medium">Nenhum post encontrado</p>
+        <p class="text-sm mt-1">Comece criando seu primeiro post no blog.</p>
+      </div>
+    <% end %>
+  </div>
+</div>

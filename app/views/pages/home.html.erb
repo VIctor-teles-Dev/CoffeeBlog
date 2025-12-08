@@ -1,0 +1,32 @@
+
+<div class="min-h-[calc(100vh-88px)] flex flex-col items-center justify-center text-center px-4">
+  <div class="space-y-8 max-w-4xl mx-auto">
+    <!-- Icon -->
+    <div class="flex justify-center animate-blur-in opacity-0" style="animation-delay: 0.1s;">
+     <div class="transition-all duration-500 ease-out hover:scale-110 hover:drop-shadow-[0_0_25px_rgba(245,158,11,0.6)]">
+       <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee-icon lucide-coffee text-amber-500"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
+     </div>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-6xl md:text-7xl font-bold text-white tracking-tight animate-blur-in opacity-0" style="animation-delay: 0.3s;">
+      <%= t('home.title_part_1') %><br/>
+      <span class="text-amber-500 "><%= t('home.title_part_2') %></span>
+    </h1>
+
+    <!-- Description -->
+    <p class="text-xl max-w-2xl mx-auto h-16 text-[#a8a29e]" 
+       data-controller="typewriter" 
+       data-typewriter-text-value="<%= t('home.description') %>"
+       data-typewriter-speed-value="30"
+       data-typewriter-delay-value="1000">
+       <!-- Text will be typed here -->
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex items-center justify-center gap-4 pt-4 animate-blur-in opacity-0" style="animation-delay: 2s; animation-fill-mode: forwards;">
+      <%= link_to t('home.view_projects'), project_path, class: "bg-amber-500 text-black font-semibold px-8 py-3 rounded-full hover:bg-amber-400 transition-colors" %>
+      <%= link_to t('home.read_articles'), blog_index_path, class: "border border-[#292524] text-white font-medium px-8 py-3 rounded-full hover:bg-[#292524] transition-colors" %>
+    </div>
+  </div>
+</div>

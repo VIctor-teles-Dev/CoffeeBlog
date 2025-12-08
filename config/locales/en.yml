@@ -1,0 +1,56 @@
+en:
+  home:
+    title_part_1: "Coffee, Codes"
+    title_part_2: "& Anything Else"
+    description: "A digital space where caffeine turns into lines of code. Welcome to my portfolio and personal blog."
+    view_projects: "View Projects"
+    read_articles: "Read Articles"
+  about:
+    title: "About the Dev"
+    bio: "Hi! I'm a developer passionate about making people's lives easier through technology. When I'm not refactoring thousands of lines of code after asking an AI to center a div, you'll probably find me testing a new coffee brewing method or writing about technology."
+    stack_title: "Main Stack"
+    stack_value: "Python & Rails"
+    coffee_title: "Favorite Coffee"
+    coffee_value: "V60 / Ethiopia"
+    journey_title: "My Journey"
+    journey:
+      item1:
+        title: "Support B2B"
+        period: "2025 - Present"
+        description: "Analysis of support requests from client companies related to data delivery via API."
+      item2:
+        title: "FullStack Developer"
+        period: "2024 - 2025"
+        description: "Development of RESTful APIs and dynamic interfaces."
+    what_i_do_title: "What I Do"
+    what_i_do:
+      item1:
+        title: "Fullstack Engineering"
+        description: "Create fullstack applications with Python Golang React &Rails."
+      item2:
+        title: "Tech Writing"
+        description: "Documentation and knowledge sharing."
+  contact:
+    title: "Contact"
+  projects:
+    title: "Portfolio"
+    subtitle: "A selection of my recent works."
+    view_project: "View Project"
+    items:
+      SpiderVerse:
+        description: "A Landing Page for Spider-Man: Across the Spider-Verse."
+      cyberweb:
+        description: "A modern Cyberpunk-themed website built with React."
+      calculator:
+        description: "A complex calculator with AI features."
+      imc:
+        description: "A simple BMI (IMC) calculator."
+  blog:
+    reading_time: "min read"
+    read_more: "Read more"
+  navbar:
+    home: "Home"
+    about: "About Me"
+    projects: "Projects"
+    blog: "Blog"
+    contact: "Contact"

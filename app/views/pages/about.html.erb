@@ -1,0 +1,97 @@
+<div class="min-h-screen bg-coffee text-[#a8a29e] font-sans selection:bg-amber-500/30">
+  <div class="max-w-6xl mx-auto px-6">
+    
+    <!-- Header -->
+    <div class="flex items-center gap-4 mb-16" data-animate-target="fade-up">
+      <div class="w-1.5 h-12 bg-amber-500 rounded-full"></div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight"><%= t('about.title') %></h1>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+      
+      <!-- Profile Column (Left) -->
+      <div class="lg:col-span-5 space-y-12">
+        <!-- Profile Image Card -->
+        <div class="relative group w-64 mx-auto lg:w-full" data-animate-target="fade-up" style="animation-delay: 100ms;">
+          <div class="absolute inset-0 bg-amber-900/20 rounded-3xl transform rotate-6 transition-transform group-hover:rotate-3 duration-500"></div>
+          <div class="relative bg-[#292524] p-2 rounded-3xl shadow-2xl overflow-hidden aspect-square border border-[#44403c]">
+             <!-- Placeholder for Profile Image -->
+             <div class="w-full h-full bg-[#1c1917] flex items-center justify-center text-amber-500">
+                <img src="<%= asset_url('About.jpg') %>" alt="Profile" class="w-full h-full object-cover">
+               
+             </div>
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="space-y-6 text-lg leading-relaxed" data-animate-target="fade-up" style="animation-delay: 200ms;">
+          <p>
+            <%= t('about.bio') %>
+          </p>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-animate-target="fade-up" style="animation-delay: 300ms;">
+          <div class="bg-[#292524] p-6 rounded-2xl border border-[#44403c] hover:border-amber-500/50 transition-colors group">
+            <h3 class="text-amber-500 font-mono text-sm mb-2"><%= t('about.stack_title') %></h3>
+            <p class="text-white font-semibold text-lg group-hover:text-amber-500 transition-colors">React & Rails</p>
+          </div>
+          <div class="bg-[#292524] p-6 rounded-2xl border border-[#44403c] hover:border-amber-500/50 transition-colors group">
+            <h3 class="text-amber-500 font-mono text-sm mb-2"><%= t('about.coffee_title') %></h3>
+            <p class="text-white font-semibold text-lg group-hover:text-amber-500 transition-colors">Coffee ++<br>Café Caparaó</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Details Column (Right) -->
+      <div class="lg:col-span-7 space-y-16">
+        
+        <!-- Journey Section -->
+        <div data-animate-target="fade-up" style="animation-delay: 400ms;">
+          <div class="flex items-center gap-3 mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase text-amber-500"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <h2 class="text-2xl font-bold text-white"><%= t('about.journey_title') %></h2>
+          </div>
+
+          <div class="relative pl-8 border-l border-[#44403c] space-y-12">
+            <!-- Item 1 -->
+            <div class="relative">
+              <div class="absolute -left-[39px] top-1 w-5 h-5 rounded-full bg-amber-500 border-4 border-[#1A120B]"></div>
+              <h3 class="text-xl font-bold text-white mb-1"><%= t('about.journey.item1.title') %></h3>
+              <span class="text-sm font-mono text-[#78716c] block mb-3"><%= t('about.journey.item1.period') %></span>
+              <p class="text-[#a8a29e]"><%= t('about.journey.item1.description') %></p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative">
+              <div class="absolute -left-[39px] top-1 w-5 h-5 rounded-full bg-[#44403c] border-4 border-[#1A120B]"></div>
+              <h3 class="text-xl font-bold text-white mb-1"><%= t('about.journey.item2.title') %></h3>
+              <span class="text-sm font-mono text-[#78716c] block mb-3"><%= t('about.journey.item2.period') %></span>
+              <p class="text-[#a8a29e]"><%= t('about.journey.item2.description') %></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What I Do Section -->
+        <div data-animate-target="fade-up" style="animation-delay: 500ms;">
+          <div class="flex items-center gap-3 mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu text-amber-500"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+            <h2 class="text-2xl font-bold text-white"><%= t('about.what_i_do_title') %></h2>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4">
+            <div class="bg-[#292524] p-6 rounded-2xl border border-[#44403c] hover:border-amber-500/30 transition-all hover:-translate-y-1">
+              <h3 class="text-white font-bold mb-2"><%= t('about.what_i_do.item1.title') %></h3>
+              <p class="text-sm text-[#a8a29e]"><%= t('about.what_i_do.item1.description') %></p>
+            </div>
+            <div class="bg-[#292524] p-6 rounded-2xl border border-[#44403c] hover:border-amber-500/30 transition-all hover:-translate-y-1">
+              <h3 class="text-white font-bold mb-2"><%= t('about.what_i_do.item2.title') %></h3>
+              <p class="text-sm text-[#a8a29e]"><%= t('about.what_i_do.item2.description') %></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
