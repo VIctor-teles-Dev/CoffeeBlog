@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: coffe-codes-and-anything-else
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec rails server"
+    envVars:
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2
+    disk:
+      name: rails_storage
+      mountPath: /rails/storage
+      sizeGB: 1
