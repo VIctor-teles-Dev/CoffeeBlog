@@ -66,7 +66,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "lucide-rails", "~> 0.7.1"
+gem "lucide-rails", "~> 0.7.3"
 
 gem "jsbundling-rails", "~> 1.3"
 
