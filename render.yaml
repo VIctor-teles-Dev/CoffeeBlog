@@ -3,6 +3,7 @@ services:
     name: coffe-codes-and-anything-else
     env: ruby
     buildCommand: "./bin/render-build.sh"
+    preDeployCommand: "bundle exec rails db:prepare"
     startCommand: "bundle exec rails server"
     envVars:
       - key: RAILS_MASTER_KEY
